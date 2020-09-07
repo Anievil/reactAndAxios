@@ -7,9 +7,9 @@ const http = axios.create({
 
 export const getData = async () => {
     try{
-        const {data: {results} }= await http.get();
-        
-        return results;
+        const info = await http.get();
+        console.log(info)
+        return info;
     }
     catch(err){
         console.log(err);
